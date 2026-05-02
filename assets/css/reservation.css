@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+/* ---------------------------
+    メインエリア 
+---------------------------*/
+
+/*見出し*/
+h2{
+    background-image: url("../images/h2_bg_297x149.png");
+}
+
+h3{
+    font-size: 28px;
+    padding-bottom: 50px;
+}
+
+
+/*レッスン内容*/
+main section .lesson{
+    line-height: 1.8em;
+    padding:25px;
+}
+
+/*体験予約フォーム*/
+main .formarea{
+    padding: 35px 60px;
+    background-color: #FFecd3;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+main .formarea h3{
+    text-align: center;
+}
+
+main .formarea span{
+    color:red;
+}
+
+
+
+/* ~~~ お問合せ ~~~ */
+
+    /* ★★★ html要編集 ! ... dtとddを 1セットずつ囲んでいるdivタグにクラス名「flex」を追加して子要素であるdtとddを横並び */
+
+
+/* ⚫︎ トップページのスタイリング時につけた line-heightを 1で上書き（余計な余白を外す） */
+form dl{
+    line-height: 1;
+}
+
+    
+/* ⚫︎ flexのカスタマイズプロパティ「gap」と「align-items」で
+　　　　　　「アイテムとアイテムの間隔」と「縦位置の揃え方」を調整 + 下に余白確保 */
+form .flex{
+    gap:20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ⚫︎ 項目側のスタイリング */
+form dl dt{
+    width: 200px;
+    text-align: right;
+
+}
+
+/* ⚫︎ 入力欄側のスタイリング */
+form dl dd{
+    width: 400px;
+}
+
+/* ⚫︎ 各入力用パーツのスタイリング（属性セレクタを活用）
+「inputタグの内、type属性がtextのもの」と、
+「inputタグの内、type属性がemailのもの」と、
+ textareaタグ */
+form input[type="date"],
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea{
+    width: 100%;
+    /* ↑ 親であるddの幅いっぱいまで広げる */
+    color: inherit;
+    /* ↑ 文字色を親から「継承させる」 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* ⚫︎ focus = 入力欄を選択して編集しようとしている状態に対するスタイリング */
+form input[type="date"]:focus,
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form textarea:focus{
+    outline: none;
+    border: 1px solid #ff931e;
+    /* デフォルトの黒いoutlineを外してオレンジのborderを付けなおす */
+}
+
+/* ⚫︎ textareaタグのみへのスタイリング */
+form textarea{
+    height:160px;
+    resize: none;
+    /* ↑ ユーザーがリサイズできる機能をoff */
+}
+
+/* ⚫︎ ボタンのスタイリング
+「inputタグの内、type属性がresetのもの」と、
+「inputタグの内、type属性がsubmitのもの」 */
+form input[type="reset"],
+form input[type="submit"]{
+    border: none;
+    background-color: #FC981D;
+    /* background-color:rgba(136, 176, 51, 0.5); */
+    color: #fff;
+    font-weight: bold;
+   
+    font-family: inherit;
+    /* ↑ フォントを親から「継承させる」 */
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    /* ↑ ホバーしたときのカーソルの形の指定 */
+    transition: background-color 0.3s;
+    
+}
+
+
+
+
+.btn{
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ⚫︎ ボタンとボタンの間の余白 */
+form input[type="reset"]{
+    margin-right: 15px;
+}
+
+/* ⚫︎ ボタンのホバー時のスタイリング */
+form input[type="reset"]:hover,
+form input[type="submit"]:hover{
+    opacity: 0.7;
+}
+
+
+
+.alert{
+    display: none;
+}
+
+
+
+main ul{
+    line-height: 2em;
+    margin-top: 40px;
+
+}
+
+main .big-list{
+    font-size: 18px;
+}
+
+main .small-list{
+    margin-top: 15px;
+}
+
+
+/*口コミ*/
+main .review{
+    padding: 25px;
+    line-height: 1.5em;
+}
+
+main .review div {
+    min-height: 110px;
+    margin-bottom: 28px;
+    padding-left: 150px;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+main .review dt{
+    font-size: 20px;
+}
+
+main .userA{
+    background-image: url("../images/userA_108x108.png");
+}
+main .userB{
+    background-image: url("../images/userB_108x108.png");
+}
+main .userC{
+    background-image: url("../images/userC_108x108.png");
+}
+
+/*挿絵イラスト*/
+main .img-area{
+    text-align: center;
+    margin: 100px 0;
+}

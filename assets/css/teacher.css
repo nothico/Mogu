@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+
+h2 {
+    background-image: url(../images/h2_bg_297x149.png);
+    margin: 32px 0 50px;
+}
+
+main {
+    text-align: center;
+}
+
+.left {
+    letter-spacing: .2em;
+    text-align: left;
+    padding-left: 200px;
+
+}
+
+.left150 {
+    letter-spacing: .2em;
+    text-align: left;
+    padding-left: 159px;
+    font-size: 25px;
+    line-height: 1.5em;
+}
+
+.text-1 {
+    font-size: 25px;
+    padding-top: 64px;
+    padding-bottom: 40px;
+    line-height: 1.5em;
+    /* background-color: aqua; */
+    position: relative;
+}
+
+.text-1::after {
+    content: "";
+    /* 空っぽを差し込む*/
+    display: block;
+    /* 幅と高さの指定を効かせるために指定 */
+    width: 192px;
+    /* イラストの画像の幅 */
+    height: 207px;
+    /* イラストの画像の高さ */
+
+    /* ↓ 画像の差し込み */
+    background: url(../images/kousi-2_03.png) center center no-repeat;
+
+    /* ↓ relativeを指定した親に対する配置位置を指定 */
+    position: absolute;
+    right: 48px;
+    bottom: 0;
+}
+
+@media screen and (min-width: 769px) and (max-width: 947px) {
+    .text-1::after {
+        display: none; /* この幅の時だけ消す */
+    }
+}
+
+.text-2 {
+    font-size: 25px;
+    padding-top: 40px;
+    line-height: 1.5em;
+}
+
+.text-3 {
+    font-size: 25px;
+    padding-top: 75px;
+    line-height: 1.5em;
+    padding-bottom: 42px;
+}
+
+.ketchup {
+    padding-top: 114px;
+    padding-bottom: 40px;
+}
+
+h3 {
+    padding-top: 50px;
+    padding-bottom: 48px;
+    font-size: 40px;
+}
+
+.text-4 {
+    padding-top: 48px;
+    padding-bottom: 75px;
+}
+
+.text-6 {
+    padding-top: 60px;
+    padding-bottom: 71px;
+}
+
+.text-7 {
+    letter-spacing: .2em;
+    padding-bottom: 111px;
+    text-align: left;
+    padding-left: 159px;
+    font-size: 25px;
+    line-height: 1.5em;
+}
+
+.oreng {
+    transform: translate(-41px, 30px)
+}
+
+.ketchup-2 {
+    padding-bottom: 114px;
+}
+
+.text-8 {
+    letter-spacing: .2em;
+    padding-top: 76px;
+    text-align: left;
+    padding-left: 159px;
+    font-size: 25px;
+    line-height: 1.5em;
+    padding-bottom: 170px;
+}
+
+.okura {
+    transform: translate(-2px, 117px)
+}
+
+.ketchup-3 {
+    padding-bottom: 55px;
+}
+
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    /* テキストの配置の基準にする */
+    padding-top: 30px;
+    /* テキストが入るスペースを上に確保 */
+}
+
+/* テキストの共通設定（記号 \ / をつける） */
+.recipe-text,
+.recipe-text-1 {
+    position: absolute;
+    z-index: 2;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+.recipe-text::before,
+.recipe-text-1::before {
+    content: "\\ ";
+}
+
+.recipe-text::after,
+.recipe-text-1::after {
+    content: " /";
+}
+
+/* ホバー時に文字色を変える（共通） */
+.link:hover .recipe-text,
+.link:hover .recipe-text-1 {
+    color: #ff9900;
+}
+
+span{
+    display: block
+}
+
+
+/* --- 通常時の設定 --- */
+
+
+/* ===========================================
+   個別の位置調整（画像サイズに合わせて変える）
+=========================================== */
+
+/* --- オクラ（大きい画像用） --- */
+.okura {
+    display: block;
+    width: 271px;
+    height: 271px;
+    transform: translate(-2px, 117px);
+    /* 元の位置 */
+    transition: all 0.3s;
+}
+
+.recipe-text {
+    top: 140px;
+    /* オクラの中央付近に配置 */
+}
+
+.link:hover .okura {
+    transform: translate(-2px, 117px) scale(1.05);
+    /* 位置を固定して拡大 */
+}
+
+/* --- オレンジ（小さい画像用） --- */
+.oreng {
+    display: block;
+    width: 167px;
+    height: 167px;
+    transform: translate(-41px, 30px);
+    /* 元の位置 */
+    transition: all 0.3s;
+}
+
+.recipe-text-1 {
+    top: 35px;
+    /* オレンジは画像が小さいので、高さを上に調整（140pxだと下すぎるため） */
+    margin-left: -80px;
+}
+
+.link:hover .oreng {
+    transform: translate(-41px, 30px) scale(1.05);
+    /* 位置を固定して拡大 */
+}
+
+
+/* -----------------------------------------
+   768px以下の画面に向けた一括設定
+----------------------------------------- */
+@media screen and (max-width: 768px) {
+
+    /* 1. 大きすぎる余白をリセット（スマホの幅に合わせる） */
+
+    .left p,        /* ← leftの中のpタグを狙う */
+    .left150 p,     /* ← left150の中のpタグを狙う */
+    .left150,       /* 直接クラスがついている場合も考慮 */
+    .text-1,        /* 個別のクラスも上書き */
+    .text-2,
+    .text-3,
+    .text-7,
+    .text-8{
+        font-size: 16px; 
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: justify;         /* 基本の両端揃え */
+        text-justify: inter-ideograph; /* 日本語の文字間隔を調整して端を揃える */
+    }
+
+    .left,
+    .left150 {
+        padding-left: 0;   /* PC版の200pxや159pxを強制解除 */
+        padding-right: 0;
+        width: 100%;
+    }
+
+    /* 2. 重なっているイラストを非表示（視認性優先） */
+    .text-1::after {
+        display: none;
+    }
+
+    /* 3. 各エリアの横並びを解除して縦積みに変更 */
+    .inner-1.flex,
+    section .flex,
+    footer .inner-1.flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 4. 画像を親要素の幅いっぱいに伸縮（はみ出し防止） */
+    main img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 5. 料理レシピリンクの重なりを完全解消 */
+    .link {
+        display: flex;
+        flex-direction: column;
+        /* 縦に並べる */
+        align-items: center;
+        position: static;
+        /* 重なりの基準をリセット */
+        padding-top: 20px;
+    }
+
+    /* テキストの固定を解除し、画像の上に配置 */
+    .recipe-text,
+    .recipe-text-1 {
+        position: static;
+        /* 浮いている状態を解除 */
+        order: 1;
+        /* 順番を「1番目（上）」に固定 */
+        margin-bottom: 10px;
+        color: #312727;
+    }
+
+    /* 画像のズレをリセットし、テキストの下に配置 */
+    .okura,
+    .oreng {
+        position: static;
+        transform: none !important;
+        /* PC版のズレを強制リセット */
+        width: 150px;
+        /* スマホ用の適切なサイズ */
+        height: auto;
+        order: 2;
+        /* 順番を「2番目（下）」に固定 */
+        margin: 0 auto;
+    }
+
+    .recipe-text-1 {
+        /* --- ここで右にずらす調整 --- */
+        display: inline-block;
+        /* 移動を反映させるために必要 */
+        transform: translateX(40px);
+        /* 数値を大きくするほど右に動きます */
+    }
+
+    /* 1. 大きすぎる余白をリセット（余計な下のマージンも消す） */
+    .text-7,
+    .text-8 {
+        padding-bottom: 20px !important;
+    }
+
+    h3{ font-size: 20px;}
+
+    span{
+        display: inline;
+    }
+
+}

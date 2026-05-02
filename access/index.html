@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荻窪にある料理教室 - 荻窪Mogu料理教室</title>
+    <meta name="description" content="荻窪にある料理教室「荻窪Mogu料理教室」のホームページ。体験予約受付中！">
+    <meta name="keywords" content="荻窪,料理教室,料理体験,スクール,主婦,学生">
+
+    <!-- ↓ faviconの読み込み -->
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png">
+
+    <!-- ↓ Google Fonts用の読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=RocknRoll+One&display=swap" rel="stylesheet">
+
+
+
+    <!--★ 各種 cssファイルの読み込み -->
+
+    <!-- ↓ 初めにリセットcssや共通cssの読み込み -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- ↓ 次にプラグインのcssファイルの読み込み -->
+    <link rel="stylesheet" href="../js/slick/slick.css">
+
+    <!-- ↓ 最後にページ固有のcssファイルの読み込み -->
+    <link rel="stylesheet" href="../assets/css/access.css">
+
+
+    <!--★ 各種 jsファイルの読み込み -->
+
+    <!-- ↓ 初めにjQuery本体ファイルの読み込み -->
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- ↓ 次にプラグインのjsファイルの読み込み -->
+    <script src="../assets/js/slick/slick.min.js"></script>
+
+    <!-- ↓ 最後に自作jsファイルの読み込み -->
+    <script src="../assets/js/script.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <header class="bg-1">
+            <h1>
+                <a><img src="../assets/images/mogu_logo_01_170x116.svg" alt="荻窪にある料理教室「荻窪Mogu教室」" width="170"
+                        height="116"></a>
+            </h1>
+
+        </header>
+
+        <!-- ↓　ここにハンバーガーボタンのコードを設置　↓ -->
+        <input type="checkbox" id="navSet" class="nav-switch">
+        <label for="navSet" class="nav-burger"></label>
+
+        <div class="nav-area bg-1 navi">
+            <nav class="inner-1 rocknroll-one-regular">
+                <ul class="flex">
+                    <li><a href="../index.html">Top</a></li>
+                    <li><a href="../reservation/index.html">体験予約</a></li>
+                    <li><a href="../teacher/index.html">スタジオ・講師紹介</a></li>
+                    <li><a href="../recipe/index.html">料理レシピ</a></li>
+                    <li><a href="../course/index.html">コース・料金</a></li>
+                    <li><a href="../access/index.html">アクセス</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="to-taiken"><a href="../reservation/index.html"><img src="../assets/images/to_taiken.png" alt="体験予約ページへ"></a></div>
+
+        <main>
+            <section class="inner-1 fadeUpActive fadeUp-trigger">
+                <h2>アクセス情報</h2>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.9847808008817!2d139.61198557602765!3d35.701992128832956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018edfeb54f52b9%3A0x4e0d4db1c56e7251!2z44CSMTY3LTAwNTIg5p2x5Lqs6YO95p2J5Lim5Yy65Y2X6I2756qq77yU5LiB55uu77yT77yS!5e0!3m2!1sja!2sjp!4v1767755141704!5m2!1sja!2sjp"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <address class="mogu-address">
+                    <p>教室名：荻窪Mogu料理教室</p>
+                    <p>住所：東京都杉並区南荻窪4-32</p>
+                    <p>電話番号：123-4567-8910</p>
+                    <p>荻窪駅徒歩7分</p>
+                </address>
+            </section>
+
+            <section class="instagram">
+                <div class="white flex">
+                    <div class="insta-shousai">
+                        <div class="acount">
+                            <p>Instagram</p>
+                            <p>@ogikubo_Mogu</p>
+                        </div>
+                        <div class="setumei">
+                            <p id="space">レッスンの裏側、覗いてみませんか？</p>
+                            <p>賑やかなレッスンの様子や、生徒さまの完成作品、講師のリアルな日常ごはんをストーリーズで毎日更新中！
+                                「料理教室ってどんな雰囲気？」と気になる方は、ぜひフォローして覗きに来てください。<br>レッスンのお申し込み・ご質問もDMから受け付けています。</p>
+                        </div>
+                    </div>
+                    <div class="insta-icon">
+                        <p>Follow me!</p>
+                        <a href="#"><img src="../assets/images/instagram_165x165.png" alt="instagramのアイコン" width="165" height="165"></a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ★ ここに横スクロールアニメのための領域 ↓ -->
+        <div class="slider-area"></div>
+
+        <footer class="bg-1">
+            <div class="inner-1 flex">
+
+                <div>
+                    <div><img src="../assets/images/mogu_logo_02_170x116.svg" alt="荻窪にある料理教室「荻窪Mogu教室」" width="170"
+                            height="116">
+                    </div>
+                    <address>
+                        <p>教室名:荻窪Mogu料理教室</p>
+                        <p>住所:東京都杉並区南荻窪4-32</p>
+                        <p>電話番号:123-4567-8910</p>
+                        <p>荻窪駅徒歩7分</p>
+                    </address>
+                </div>
+
+                <div>
+                    <div class="footer_insta">
+                        <p><a href="#"><img src="../assets/images/footer_instagram_50x50.png"
+                                    alt="荻窪Mogu料理教室のInstagramアカウントへ" width="50" height="50"></a></p>
+                        <p>@ogikubo_Mogu</p>
+                    </div>
+                    <p class="copyright"><small>&copy;2025 Ogikubo mogu cooking</small></p>
+                </div>
+
+                <p class="cutlery">
+                    <img src="../assets/images/cat_01_290x290.png" alt="カトラリーの画像" width="290" height="290">
+                </p>
+
+            </div>
+        </footer>
+        <div class="to-top">
+            <a href="#"><img src="../assets/images/to_top_50x90.png"
+                    onmouseover="this.src='../assets/images/to_top_after.png'"
+                    onmouseout="this.src='../assets/images/to_top_50x90.png'" alt="ページの先頭に戻る" width="" height=""></a>
+        </div>
+        <div class="cta">
+            <p class="rocknroll-one-regular"><a href="../reservation/index.html">体験予約はこちら</a></p>
+        </div>
+
+    </div>
+
+</body>

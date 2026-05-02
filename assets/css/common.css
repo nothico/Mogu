@@ -1,0 +1,562 @@
+@charset "utf-8";
+
+/* common.css
+　... ヘッダーやフッターなどのサイト全体で共通となる部分や、
+　複数のページで使用できそうな指定を書いておき、すべてのページに共通で読み込ませる。 */
+
+/* ===========================================
+   ◆ リセットの役割をする記述 
+===========================================*/
+
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,figure{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img{
+    vertical-align: bottom;
+}
+
+a{
+    text-decoration: none;
+}
+
+address{
+    font-style: normal;
+}
+
+
+/* ===========================================
+   ◆ 全体に対する基本指定
+===========================================*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #312727;
+    line-height: 1;
+    background-color: #fff;
+}
+
+/* コンテンツの幅を制御する記述 */
+.wrap{
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+
+/* コンテンツ幅の制御 */
+
+.inner-1{
+    max-width: 1000px;
+    margin: 0 auto;
+    /*outline: 1px solid #00f;*/
+}
+
+
+/* 背景指定 */
+
+/* コーポレートカラー色 */
+.bg-1{
+    background-color: #fcd575;
+    /*color: #fff;*/
+}
+
+
+/* 横並び用class */
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ===========================================
+   ◆ エリアごとの仕上げ
+===========================================*/
+
+/* ---------------------------
+    ヘッダーエリア 
+---------------------------*/
+h1{
+    background-color: #EA5549;
+    max-width: 530px;
+    height: 140px;
+    margin:0 auto;
+    border-radius: 0 0 140px 140px;   /* 角ごとのボーダー指定 */
+    text-align: center;
+}
+
+h2{
+    font-size: 32px;
+    text-align: center;
+    /*width: 220px;*/
+    line-height: 175px;
+    background-image: url("../images/h2_bg_220x175.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "RocknRoll One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ナビゲーション部分のスタイリング */
+
+.nav-area{
+    border-radius: 0 0 120px 120px;   /* 角ごとのボーダー指定 */
+    margin-bottom: 28px;
+    position: sticky;
+    top:0;
+    left:0;
+    z-index: 3;
+}
+
+
+nav ul li{
+    /*width: 184px;*/
+    line-height: 24px;
+    text-align: center;
+    padding:28px 0;
+}
+
+nav ul li a{
+    display: block;
+    width: 100%;
+    height:100%;
+    color: #312727;
+    font-weight: bold;
+    font-size: 24px;
+
+    /* ホバー用の秒数指定 */
+    transition:color 0.3s;
+}
+
+/* 背景色の変更 */
+nav ul li a:hover{
+    color: #EA5549;
+}
+
+.current{
+    color: #EA5549;
+}
+
+
+
+/* ---------------------------
+    体験予約ボタン 
+---------------------------*/
+
+.to-taiken{
+    /* ブラウザ右上に固定 */
+    position: fixed;
+    right:0px;
+    top: 200px;
+    height: 290px;
+   /* width: 77px;*/
+   z-index: 1;
+}
+
+
+
+/*ロックンロールフォント*/
+.rocknroll-one-regular {
+    font-family: "RocknRoll One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@keyframes bg-move{
+    0%{
+        background-position: 0 0;
+    }
+
+    100%{
+        background-position: -1434px 0;
+        /* 「-1416px」＝用意した画像の横幅 */
+    }
+}
+
+  .slider-area{
+    width: 100%;
+    height:335px;
+    /* 「335px」＝用意した画像の高さ */
+    background-image: url(../images/slide1434x335.jpg);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    animation: bg-move 24s linear infinite;
+}
+
+/* ---------------------------
+    フッターエリア 
+---------------------------*/
+/* フッターの中身のスタイリング */
+
+footer .flex{
+    align-items: flex-end;
+    padding-bottom: 28px;
+}
+
+footer address{
+    font-size: 18px;
+    line-height: 1.5em;
+    padding-top:45px;
+
+}
+
+/* Instagram ロゴ */
+footer .footer_insta{
+    text-align: center;
+    /* margin: 0 auto 100px; */
+}
+
+footer .footer_insta p{
+    margin-top: 25px;
+}
+
+
+/* コピーライト */
+footer .copyright{
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* ---------------------------
+    トップボタン 
+---------------------------*/
+
+.to-top{
+    /* ブラウザ右下に固定 */
+    position: fixed;
+    right:40px;
+    bottom: 125px;   /* 本来の数値40px + CTAの高さ85px = 125px */
+    height: 115px;
+}
+
+
+
+/* ---------------------------
+    CTAボタン 
+---------------------------*/
+
+.cta{
+    background-color: #EA5549;
+    height: 130px;
+    padding: 28px 0;
+}
+
+
+/* ボタン部分のスタイリング */
+.cta p{
+    max-width: 370px;
+    line-height: 72px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta p a{
+    display: block;
+    width: 100%;
+    height:100%;
+    background-color: #FFECD3;
+    color: #312727;
+    border-radius: 36px;
+    font-size: 32px;
+   /* font-weight: bold;*/
+    transition: color 0.3s,  background-color 0.3s;
+}
+
+.cta p a:hover{
+    color: #FFECD3;
+    background-color: #312727;
+
+}
+
+/* アニメーション */
+@keyframes fadeUp-move {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* fadeUpアニメを適用する記述 （このクラスが付くとアニメが動く）*/
+.fadeUpActive {
+    animation: fadeUp-move 1s ease forwards;
+}
+
+/* 要素をあらかじめ下にずらして透明にしておく */
+.fadeUp-trigger {
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+
+
+
+
+/* -------------------------------------------
+    ★リキッドデザイン（フルードデザイン）対応
+    px固定幅での指定をmax-width、min-widthや％にする
+　　　　　　　　　　　　＋
+    ★フルードイメージ対応
+    imgが親要素に合わせて伸縮可能になるようにする
+------------------------------------------- */
+
+/* コンテンツ幅の指定方法を修正 */
+.wrap{
+    width: auto;        /* もともと記述していた「width:960px;」の指定を取り消す */
+    max-width: 1280px;   /* 最大幅960px = 960px以下に縮まることができる + 960px以上にはならない*/
+    min-width: 320px;   /* 最小幅320px = 960px以上に伸びることができる + 320px以下にはならない*/
+}
+
+/* 見出し画像のフルードイメージ対応 */
+mv-photo img{
+    max-width: 100%;    /* 親要素に合わせて伸び縮みさせる＋もとの画像サイズ以上に無理に引き伸ばされることはならない */
+    height: auto;       /* 縦横比を保護：可変的な横幅に合わせて、縦横比が崩れないように高さも合わせる */
+}
+
+
+
+/* -----------------------------------------
+  チェックボックスを非表示 （最後に追記）
+----------------------------------------- */
+.nav-switch{
+    display: none;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+    ここからはメディアクエリを用いたスタイルの「切り替え」を行っていく記述
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+/* -----------------------------------------
+  768px以下の画面に向けた記述
+----------------------------------------- */
+
+@media screen and (max-width:768px){
+
+    /* ヘッダー */
+    header{
+        /* ブラウザ上部に固定 */
+        /* position: fixed;    
+        top:0;
+        left:0; */
+
+        width: 100%;        /* fixedにより縮まってしまう横幅を直す */
+        padding-bottom: 28px;    /* 余白を小さくする */
+    }
+
+    header h1{
+        line-height: 1;    /* 余計な余白を外す */
+    }
+
+    header h1 img{
+        width: 170px;       /* ロゴのサイズを小さくする */
+        height: auto;       /* 縦横比を保護 */
+    }
+
+    /* ヘッダーを固定したことによる滑り込みに対処 */
+    /* headerの高さ分の余白を差し込む */
+    .header-br{
+        padding-top: 120px;  
+    }
+
+    
+    /* 文字揃えが両端揃えになるよう整える
+    （画面幅が小さいと行送りが増えてバラつきが目立つため） */
+    /* .text{
+        text-align: justify;
+    } */
+
+
+
+/* ～～～　ここからハンバーガーメニュー化の処理　～～～ */
+
+
+  /* ★★★ html要編集 !
+  ... navタグ上にハンバーガーボタン用のコードを設置する（inputタグとlabelタグ）
+        ※ inputタグは表示切替のためのスイッチの役割、labelタグはハンバーガーボタンの見た目を作り出す役割
+  ... inputタグに id名「navSet」、labelタグにfor属性で「navSet」（=idと同じ内容）を設定することにより連動させる
+  ... inputタグ にcss用のclass名「nav-switch」を追加
+  ... labelタグ にcss用のclass名「nav-burger」を追加*/
+
+
+
+    /* ハンバーガーボタンを作る */
+    .nav-burger{
+        display: block;    /* widthとheightを効かせるためのdisplay切り替え */
+        width: 30px;       /* 背景画像の分のサイズを確保 */
+        height:30px;
+
+        /* ↓ 三本線のボタン画像を背景画像として差し込む */
+        background-image: url(../images/burger.png);
+
+        position: fixed;   /* ブラウザの上から16px、右から16pxの位置に固定 */
+        top:16px;
+        right:16px;
+
+        z-index: 1000;
+    }
+
+
+
+    /* 三本線のボタンと✕のボタンの切り替え */
+
+    /* チェックが入っている状態(:checked)の「nav-switch」(inputタグ)の
+    「弟である(~)」、「nav-burger」の背景画像を×ボタンの画像に差し替える */
+    .nav-switch:checked ~ .nav-burger{
+        background-image: url(../images/close.png);
+    }
+
+    /* マウスカーソルの調整 */
+    .nav-burger:hover{
+        cursor: pointer;
+    }
+
+    
+    /* ナビゲーションが開いたときの見た目を仕上げる ＝ スタイルを作り変える */
+    nav{
+        background-color: rgba(252, 213, 117, 0.8);
+        position: fixed;    /* ブラウザの画面いっぱいに広げて固定 */
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+
+        /* 余白の調整 */
+        padding-top: 100px;
+    }
+
+    nav ul li a{
+        color: #312727;
+    }
+
+    nav ul li a:hover{
+        color:rgba(255,255,255,0.6);
+        background: transparent;
+    }
+
+    nav ul{
+        flex-direction: column;     /* 横並びを縦並びに変える */
+    }
+
+    nav ul li{
+        border: none;
+        border-top: 1px solid #fff;
+        width: auto;
+        /*line-height: 60px;*/
+    }
+
+    nav ul li:last-of-type{
+        border-bottom: 1px solid #fff;
+    }
+
+
+  /* ★★★ html要編集 !
+  ... navタグに表示/非表示切り替え用のclass名「navi」を追加 */
+
+    /* class名「navi」を使ってnavタグを丸ごと非表示にする */
+    .navi{
+        display: none;
+    }
+
+    /* inputタグにチェックが入ると「navi」が再表示される */
+    .nav-switch:checked ~ .navi{
+        display: block;
+    }
+
+    footer .cutlery img{
+        width: 100%;
+    }
+
+/* ★補足 */
+/*
+・display:none;で非表示にしたものを再表示するには、
+　そのタグの元の性質に戻せばよいので、display:block;によって再表示できる。
+
+・チェックが入っている状態(:checked)の「nav-switch」(inputタグ)の「弟である(~)」、
+「navi」をdisplay:block;にするという記述になっているため、
+　html側でnavタグがinputタグの弟要素として配置されていないとこの仕組みは使えない。
+*/
+
+
+/* ひと通り動作確認ができたら、inputタグのチェックボックスを非表示にする
+（当ファイルの207行目の記述） */
+
+
+}   /* ←←← メディアクエリ記述(768px以下)の閉じ括弧 */
+
+
+
+
+/* -----------------------------------------
+  ここから500px以下の画面に向けた記述
+----------------------------------------- */
+
+/* 最小320px幅での表示でも表示崩れがない状態を目指す */
+
+@media screen and (max-width:500px){
+
+    .to-taiken{
+        display: none;
+    }
+
+    
+    /* ★画像の縮まりすぎに対処 */
+
+    /* まずはheightを固定して縦の縮まりすぎを制御 */
+    /* 縦横比を保護するためにobject-fitとobject-positionを使って画像をカット処理 */
+    footer img{
+        /* height: 160px; */
+        margin-top: 15px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    footer .cutlery{
+        display:none;
+    }
+
+    /* 各所余白や文字サイズを細かく修正 */
+
+    /* section部分 */
+    section{
+        padding: 0;
+    }
+
+
+
+    footer .flex{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 幅を再指定（48% → 100%）、余白の調整、画像の真ん中寄せ */
+    /* main figure{
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    } */
+
+
+    /* フッター */
+    /* コピーライトの位置を調整 */
+    footer{
+        text-align: center;
+        padding: 0;
+    }
+
+}

@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+/*メインビジュアルエリア*/
+
+.mv-area{
+    max-width: 1280px;
+    margin:0 auto ;
+}
+
+.mv-photo{
+
+    position: relative;    /* 位置の基準にする */
+}
+
+.mv-center{
+        /* ↓ relativeを指定した親に対する配置位置を指定 */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+/*slickの画像表示に対しての調整*/
+.slick-slide img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+/*あいさつ*/
+.check-bg{
+    /*height: 488px;*/
+    background-image: url("../images/check_1279x488.png");
+    background-repeat: repeat;
+    padding:50px 0;
+    margin-top: 28px;
+}
+
+.top-text{
+    background-color: #fff;
+    font-size: 24px;
+    /*height: 372px;*/
+    padding: 55px;
+    line-height: 2em;
+    position: relative;    
+}
+
+
+/* イラストの部分を作り出す */
+
+.top-text::after{
+    content:"";     /* 空っぽを差し込む*/
+    display:block;  /* 幅と高さの指定を効かせるために指定 */
+    width: 288px;   /* イラストの画像の幅 */
+    height:254px;   /* イラストの画像の高さ */
+
+    /* ↓ 画像の差し込み */
+    background: url(../images/leaf_top288x254.png) center center no-repeat;
+
+    /* ↓ relativeを指定した親に対する配置位置を指定 */
+    position: absolute;
+    right:0;
+    top:-230px;
+}
+
+/*お知らせ*/
+main .news-bg{
+    background-image: url("../images/kpkine_top_1280x400.png");
+    background-repeat: no-repeat;
+    background-position:center bottom 30px;
+    background-size: 100%;
+    padding-bottom: 300px;
+}
+
+
+/* イラストの部分を作り出す */
+main .news-bg section{
+    position: relative;    /* 位置の基準にする */
+}
+
+main .news-bg section::after{
+    content:"";     /* 空っぽを差し込む*/
+    display:block;  /* 幅と高さの指定を効かせるために指定 */
+    width: 271px;   /* イラストの画像の幅 */
+    height:271px;   /* イラストの画像の高さ */
+
+    /* ↓ 画像の差し込み */
+    background: url(../images/okura_271x271.png) center center no-repeat;
+
+    /* ↓ relativeを指定した親に対する配置位置を指定 */
+    position: absolute;
+    right:0;
+    top:0px;
+}
+
+main section dl dd{
+    padding-left:18px;
+    line-height: 2em;
+
+}
+
+main section dl dt{
+    line-height: 2em;
+}
+
+
+h2{
+    width: 220px;
+    text-align: center;
+    background-position: center;
+    margin-top:20px;
+}
+
+/*flext-startに上書き*/
+main .flex{
+    display: flex;
+    justify-content: flex-start;
+    background-image: url("../images/underline_696x11.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    
+}
+
+
+
+/*レスポンシブ対応*/
+
+/* -----------------------------------------
+  768px以下の画面に向けた記述
+----------------------------------------- */
+
+@media screen and (max-width:768px){
+   
+    /* 文字揃えが両端揃えになるよう整える
+    （画面幅が小さいと行送りが増えてバラつきが目立つため） */
+    .top-text{
+        text-align: justify;
+    }
+
+
+    .mv-photo {
+        height: 500px;
+        overflow: hidden;
+    }
+}
+
+
+/* -----------------------------------------
+  ここから500px以下の画面に向けた記述
+----------------------------------------- */
+
+/* 最小320px幅での表示でも表示崩れがない状態を目指す */
+
+@media screen and (max-width:500px){
+
+    
+    /* ★画像の縮まりすぎに対処 */
+
+    /* まずはheightを固定して縦の縮まりすぎを制御 */
+    /* 縦横比を保護するためにobject-fitとobject-positionを使って画像をカット処理 */
+    /* img{
+        object-fit: cover;
+        object-position: center;
+    } */
+
+    /* 各所余白や文字サイズを細かく修正 */
+
+ 
+
+    .mv-center img{
+        /* ↓ relativeを指定した親に対する配置位置を指定 */
+        width: 100%;
+        height: auto;
+    }
+
+    /*スマホ画面ではリーフ画像を消す*/
+    .top-text::after{
+        display:none;
+    }
+
+    /* お知らせsection部分 */
+    section dl dt dd{
+        margin-top: 6px;
+    }
+
+    main .news-bg section::after{
+    
+        /* ↓ 画像の調整 */
+        background-size: 65%;
+        background-position: top right;
+ 
+    }
+
+    /* .text部分 */
+    .text{
+        margin: 0 20px 20px;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    main .news-bg{
+        padding-bottom: 40%;
+    }
+    
+
+
+    /* 幅を再指定（48% → 100%）、余白の調整、画像の真ん中寄せ */
+    /* main figure{
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    } */
+
+
+
+}

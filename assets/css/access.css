@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+.inner-1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+    /*max-width: 220px;*/
+    line-height: 175px;
+    background-image: url(../images/h2_bg_297x149.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "RocknRoll One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+iframe {
+    padding: 28px;
+    margin-bottom: 22px;
+    max-width: 100%;
+}
+
+.mogu-address {
+    line-height: 28px;
+    text-align: center;
+    max-width: 100%;
+    background-image: url(../images/leaf_access_870x194.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 40px;
+}
+
+.instagram {
+    background-image: url(../images/check_access_1280x720.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    margin-top: 50px;
+    padding-top: 105px;
+    padding-bottom: 120px;
+}
+
+.white {
+    background-color: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 82.5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.insta-shousai {
+    max-width: 540px;
+    height: auto;
+    line-height: 2em;
+}
+
+.insta-shousai .acount {
+    font-size: 30px;
+    line-height: 50px;
+    padding-bottom: 15px;
+    background-image: url("../images/underline_696x11.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.insta-shousai .setumei #space {
+    padding: 40px 0 35px 0;
+    font-size: 18px;
+}
+
+.insta-icon p {
+    font-size: 24px;
+    text-align: center;
+    padding: 30px 0 82.5px 82.5px;
+    animation: poyopoyo 2s ease-out infinite;
+}
+
+@keyframes poyopoyo {
+
+    0%,
+    40%,
+    60%,
+    80% {
+        transform: scale(1.0);
+    }
+
+    50%,
+    70% {
+        transform: scale(0.95);
+    }
+}
+
+.insta-icon a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    padding-left:82.5px;
+}
+
+.insta-icon a:hover {
+    opacity :0.7;
+}
+
+
+main::after {
+    content: "";
+    display: block;
+    background: url("../images/kpline_1280x142.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    max-width: 100%;
+    padding: 8%;
+    margin-bottom: 20px;
+}
+
+/* -----------------------------------------
+  ここから500px以下の画面に向けた記述
+----------------------------------------- */
+
+/* 最小320px幅での表示でも表示崩れがない状態を目指す */
+@media screen and (max-width:768px) {
+
+    /* ★画像の縮まりすぎに対処 */
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 各所余白や文字サイズを細かく修正 */
+
+    /* タイトル文字部分 */
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 0 auto;
+        text-align: center;
+        background-position: center bottom;
+    }
+
+
+    /* .セクション内のテキスト部分 */
+    #space {
+        font-size: 18px;
+        line-height: 1.5em;
+        text-align: center;
+    }
+
+    /* 横並びを縦積みに変更して余白を再調整 */
+    main .flex {
+        flex-direction: column;
+        margin: 0 30px 5px;
+    }
+
+    .instagram {
+        background-image: url(../images/check_access_1280x720.jpg);
+        background-repeat: repeat;
+        background-position: center;
+        padding: 50px 0;
+    }
+
+    .insta-shousai {
+        margin: 0 auto;
+        text-align: justify;
+        justify-content: center;
+    }
+
+    .acount {
+        text-align: center;
+    }
+
+    .insta-icon p {
+        padding-bottom: 33px;
+        padding-left: 0;
+        padding-top: 82.5px;
+    }
+
+    .insta-icon a {
+        width: 30%;
+        padding-left: 0;
+        padding: 50px 0; 
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .white {
+        padding: 45px;
+    }
+}

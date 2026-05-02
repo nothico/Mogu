@@ -1,0 +1,201 @@
+@charset "utf-8";
+h2{
+    background-image: url(../images/h2_bg_297x149.png);
+    margin-bottom: 80px;
+}
+
+.text-group{
+font-size: 18px;
+line-height: 2em;
+}
+
+.img-group{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.text-1{
+    padding-bottom: 60px;
+}
+
+.oreng{
+    transform: translateX(140px)
+}
+
+
+
+/* 目次エリア全体のスタイル */
+.mokuzi {
+    font-size: 20px;
+    background-color: #fcd575;
+    margin-top: 100px;
+    padding: 60px 40px; /* 上下左右に少し余白を作る */
+    align-items: center; /* 垂直方向（上下）の中央に揃える */
+    justify-content: center; /* 水平方向の中央に寄せる */
+    gap: 40px;          /* タイトルとリストの間隔 */
+}
+
+/* 目次のリスト部分 */
+.mokuzi ul {
+    gap: 20px;          /* 項目（コース名）同士の間隔 */
+    list-style: none;   /* 黒丸を消す */
+    margin: 0;
+    padding: 0;
+}
+
+
+.t2::after, .t3::after, .t4::after, .t5::after{
+    content: ">";
+    margin-right: 3px;
+}
+
+.mokuzi a {
+    color: #000000;         /* 文字色を黒に */
+}
+
+.mokuzi a:hover {
+    text-decoration: underline; /* マウスホバーで下線を表示 */
+    color: #666666;             /* 少しグレーにする */
+}
+
+h4{
+    padding-top: 100px;
+    padding-bottom: 55px;
+    text-align: center;
+}
+.en{
+    font-size: 50px;
+    color: #ff931e;
+    display: block;
+    padding-bottom: 27px;
+}
+
+.ja{
+    font-size: 30px;
+}
+
+.text-2{
+    text-align: center;
+    font-size: 20px;
+    line-height: 2em;
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.line{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.text-3{
+    font-size: 20px;
+}
+
+.text-3 a{
+    color: #ff931e;
+}
+
+.flex.text-3 {
+    display: flex;
+    align-items: center; /* 上下の中心を揃える */
+    width: 694px;
+    margin: 0 auto;
+}
+
+.text-3 .flex{
+    gap: 35px;
+}
+
+.flex.text-3 a::after {
+    content: ">";     
+    font-weight: bold; 
+}
+
+.flex.text-3 a p {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.flex.text-3 a:hover {
+    color: #666666;             /* 少しグレーにする */
+}
+
+.line-2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 120px;
+}
+
+span{
+    display: block;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /* 1. 画像全体の伸縮対応 */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 2. 横並び解除 */
+    section .flex,
+    .mokuzi.flex,
+    .flex.text-3 {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* 固定幅を強制解除 */
+    }
+
+    /* 3. テキストグループの調整（中央寄せと両端揃えの整理） */
+    .img-group {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-group, 
+    .text-2,
+    address {
+        font-size: 14px; /* ここで一括指定 */
+        padding: 0 20px; /* 左右余白をまとめて指定 */
+        text-align: justify;
+        text-justify: inter-ideograph;
+        box-sizing: border-box;
+    }
+
+    .text-3 {
+        font-size: 14px;
+        gap: 20px;
+    }
+
+    /* 4. 不要な要素・改行の非表示 */
+    .oreng,
+    .text-group br,
+    .text-2 br {
+        display: none;
+    }
+
+    /* 5. 目次部分の微調整 */
+    .mokuzi {
+        padding: 40px 20px;
+    }
+    .mokuzi ul.flex {
+        flex-direction: column;
+        align-items: flex-start; /* 箇条書きらしく左揃え */
+        gap: 15px;
+    }
+
+    span{
+        display: inline;
+    }
+
+    /* 6. はみ出し防止 */
+    /* .en {
+        font-size: 8vw;
+    }
+    body {
+        overflow-x: hidden;
+    } */
+}

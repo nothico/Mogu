@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荻窪にある料理教室 - 荻窪Mogu料理教室</title>
+    <meta name="description" content="荻窪にある料理教室「荻窪Mogu料理教室」のホームページ。体験予約受付中！">
+    <meta name="keywords" content="荻窪,料理教室,料理体験,スクール,主婦,学生">
+
+    <!-- ↓ faviconの読み込み -->
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png">
+
+    <!-- ↓ Google Fonts用の読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=RocknRoll+One&display=swap" rel="stylesheet">
+
+
+
+    <!--★ 各種 cssファイルの読み込み -->
+
+    <!-- ↓ 初めにリセットcssや共通cssの読み込み -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- ↓ 次にプラグインのcssファイルの読み込み -->
+    <link rel="stylesheet" href="../js/slick/slick.css">
+
+    <!-- ↓ 最後にページ固有のcssファイルの読み込み -->
+    <link rel="stylesheet" href="../assets/css/reservation.css">
+
+
+    <!--★ 各種 jsファイルの読み込み -->
+
+    <!-- ↓ 初めにjQuery本体ファイルの読み込み -->
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- ↓ 次にプラグインのjsファイルの読み込み -->
+    <script src="../assets/js/slick/slick.min.js"></script>
+
+    <!-- ↓ 最後に自作jsファイルの読み込み -->
+    <script src="../assets/js/script.js"></script>
+
+
+</head>
+
+<body>
+    <div class="wrap">
+
+    <header class="bg-1">
+        <h1>
+            <a><img src="../assets/images/mogu_logo_01_170x116.svg" alt="荻窪にある料理教室「荻窪Mogu教室」" width="170"
+                    height="116"></a>
+        </h1>
+
+    </header>
+
+     <!-- ↓　ここにハンバーガーボタンのコードを設置　↓ -->
+     <input type="checkbox" id="navSet" class="nav-switch">
+     <label for="navSet" class="nav-burger"></label>
+
+    <div class="nav-area bg-1 navi">
+        <nav class="inner-1 rocknroll-one-regular">
+            <ul class="flex">
+                <li><a href="../index.html">Top</a></li>
+                <li><a href="#" class="current">体験予約</a></li>
+                <li><a href="../teacher/index.html">スタジオ・講師紹介</a></li>
+                <li><a href="../recipe/index.html">料理レシピ</a></li>
+                <li><a href="../course/index.html">コース・料金</a></li>
+                <li><a href="../access/index.html">アクセス</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="to-taiken"><a href="../reservation/index.html"><img src="../assets/images/to_taiken.png" alt="体験予約ページへ"></a></div>
+
+    <main>
+        <section class="inner-1  fadeUp-move fadeUp-trigger">
+            <h2>体験レッスンの内容</h2>
+            <div class="lesson">
+                <p>「料理教室ってどんな感じ？」と思ったら、まずは体験教室へ！ </p>
+                <br>
+                <p>荻窪Mogu料理教室では、体験レッスンをご用意しています。<br>
+                    実際通うのに迷いのある方、教室や講師の雰囲気を知ってから通いたい方、お一人でも、ご友人との参加も可能です。</p>
+                <p>夕食を一緒に作るような感覚で、男女問わず誰でも１回から参加することができます。「毎週土曜日に必ず来なければいけない！」などということはなく、忙しく働く方でもレッスンに行く日や時間を自分で自由に決めることができるので、通学のスケジュールがとても立てやすくなっています。長く通う方にはお得な割引制度もご用意しています。
+                </p>
+                <br>
+                <p>是非、お気軽にご参加ください。<br>
+                    ご予約は、下記よりオンラインでお申し込みいただけます。</p>
+            </div>
+        </section>
+        <div class="img-area"><img src="../assets/images/orange_105x105.png" alt="オレンジの画像" width="105" height="105"></div>
+        <div class="inner-1">
+            <div class="formarea">
+                <h3>体験予約フォーム</h3>
+                <form action="text.php" method="post">
+                    <dl>
+                        <div class="flex" id="selectSection">
+                            <dt>曜日(各日18:00~)<span>*</span></dt>
+                            <dd>
+                                <select name="date" id="select">
+                                    <option value="none">選択してください</option>
+                                    <option value="mon">月曜日</option>
+                                    <option value="wed">水曜日</option>
+                                    <option value="sat">土曜日</option>
+                                </select>
+                                <span class="alert">選択してください。</span>
+                            </dd>
+                        </div>
+                        <div class="flex" id="textSection">
+                            <dt>お名前<span>*</span></dt>
+                            <dd>
+                                <input type="text" name="userName" id="text">
+                                <span class="alert">お名前を入力してください</span>
+                            </dd>
+                        </div>
+                        <div class="flex" id="textSection2">
+                            <dt>TEL<span>*</span></dt>
+                            <dd>
+                                <input type="tel" name="userTel" id="text2">
+                                <span class="alert">電話番号を入力してください</span>
+                            </dd>
+                        </div>
+                        <div class="flex" id="textSection3">
+                            <dt>メールアドレス<span>*</span></dt>
+                            <dd>
+                                <input type="email" name="userEmail" id="text3">
+                                <span class="alert">メールアドレスを入力してください</span>
+                            </dd>
+                        </div>
+                        <div class="flex">
+                            <dt>その他お問い合せ</dt>
+                            <dd><textarea name="message"></textarea></dd>
+                        </div>
+                    </dl>
+                    <div class="btn">
+                        <input type="reset" value="リセット"><input type="submit" id="submitBtn" value="送信する">
+                    </div>
+                </form>
+            </div>
+            <ul>
+                <li class="big-list">参加費　2000円</li>
+                <li class="big-list">レッスン時間　60分(説明を含む)</li>
+                <li class="big-list">お持ち物　エプロン、ハンドタオル</li>
+
+                <li class="small-list">※体験レッスンは、お1人さま1回限りの参加となります。</li>
+                <li>※材料や仕込みの関係上、ご予約の変更・キャンセルは3日前までにお願いいたします。</li>
+                <li>※参加資格高校生以上</li>
+            </ul>
+        </div>
+        <div class="img-area"><img src="../assets/images/orange_105x105.png" alt="オレンジの画像" width="105" height="105"></div>
+        <section class="inner-1 review">
+            <h3>◎これまでに体験に参加された方の口コミ</h3>
+            <div class="userA">
+                <dl>
+                    <dt>Aさん　30代女性</dt>
+                    <dd>
+                        会社帰りにも通える体験レッスンの時間があり、お試しで受けてみました。先生は優しくて、あっという間の時間でした。その場で食べられるものと、持ち帰れるものがありました。<br>
+                        ご自身の目的に合わせて、ウェブサイトでコース内容やスケジュールを確認し、体験レッスンに参加してみることをお勧めします。
+                    </dd>
+                </dl>
+            </div>
+            <div class="userB">
+                <dl>
+                    <dt>Bさん　40代男性</dt>
+                    <dd>
+                        近所ということもあり、友人の紹介で体験に行ってきました。料理をわかりやすく教えてくれて、作ったものをその場で食べられるのがよいですね！入会には至りませんでしたが、コースは初心者向けから玄人までのレベルあるので、ひとつ極めたい方には良いかもしれません。
+                    </dd>
+                </dl>
+            </div>
+            <div class="userC">
+                <dl>
+                    <dt>Cさん　40代女性</dt>
+                    <dd>
+                        日々の献立作りにマンネリを感じていたところ、ママ友に誘われて一緒に体験レッスンに参加しました。意外な食材の組み合わせや調理のコツを教えていただくことができ、楽しく時間を過ごすことができました。レッスン日時が固定ではないので、また予定を合わせて友人と行ってみたいと思いました。
+                    </dd>
+                </dl>
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <!-- ★ ここに横スクロールアニメのための領域 ↓ -->
+    <div class="slider-area"></div>
+
+    <footer class="bg-1">
+        <div class="inner-1 flex">
+
+            <div>
+                <div><img src="../assets/images/mogu_logo_02_170x116.svg" alt="荻窪にある料理教室「荻窪Mogu教室」" width="170"
+                        height="116">
+                </div>
+                <address>
+                    <p>教室名:荻窪Mogu料理教室</p>
+                    <p>住所:東京都杉並区南荻窪4-32</p>
+                    <p>電話番号:123-4567-8910</p>
+                    <p>荻窪駅徒歩7分</p>
+                </address>
+            </div>
+
+            <div>
+                <div class="footer_insta">
+                    <p><a href="#"><img src="../assets/images/footer_instagram_50x50.png"
+                                alt="荻窪Mogu料理教室のInstagramアカウントへ" width="50" height="50"></a></p>
+                    <p>@ogikubo_Mogu</p>
+                </div>
+                <p class="copyright"><small>&copy;2025 Ogikubo mogu cooking</small></p>
+            </div>
+
+            <p class="cutlery">
+                <img src="../assets/images/cat_01_290x290.png" alt="カトラリーの画像" width="290" height="290">
+            </p>
+
+        </div>
+    </footer>
+    <div class="to-top">
+        <a href="#"><img src="../assets/images/to_top_50x90.png" onmouseover="this.src='../assets/images/to_top_after.png'" onmouseout="this.src='../assets/images/to_top_50x90.png'"alt="ページの先頭に戻る" width="" height=""></a>
+    </div>
+    <div class="cta">
+        <p class="rocknroll-one-regular"><a href="#">体験予約はこちら</a></p>
+    </div>
+</div>
+</body>

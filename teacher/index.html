@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荻窪にある料理教室 - 荻窪Mogu料理教室</title>
+    <meta name="description" content="荻窪にある料理教室「荻窪Mogu料理教室」のホームページ。体験予約受付中！">
+    <meta name="keywords" content="荻窪,料理教室,料理体験,スクール,主婦,学生">
+
+    <!-- ↓ faviconの読み込み -->
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png">
+
+    <!-- ↓ Google Fonts用の読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=RocknRoll+One&display=swap" rel="stylesheet">
+
+
+
+    <!--★ 各種 cssファイルの読み込み -->
+
+    <!-- ↓ 初めにリセットcssや共通cssの読み込み -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- ↓ 次にプラグインのcssファイルの読み込み -->
+    <link rel="stylesheet" href="../js/slick/slick.css">
+
+    <!-- ↓ 最後にページ固有のcssファイルの読み込み -->
+    <link rel="stylesheet" href="../assets/css/teacher.css">
+
+
+    <!--★ 各種 jsファイルの読み込み -->
+
+    <!-- ↓ 初めにjQuery本体ファイルの読み込み -->
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- ↓ 次にプラグインのjsファイルの読み込み -->
+    <script src="../assets/js/slick/slick.min.js"></script>
+
+    <!-- ↓ 最後に自作jsファイルの読み込み -->
+    <script src="../assets/js/script.js"></script>
+
+
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header class="bg-1">
+            <h1>
+                <a><img src="../assets/images/mogu_logo_01_170x116.svg" alt="荻窪にある料理教室「荻窪Mogu教室」" width="170"
+                        height="116"></a>
+            </h1>
+
+        </header>
+
+        <!-- ↓　ここにハンバーガーボタンのコードを設置　↓ -->
+        <input type="checkbox" id="navSet" class="nav-switch">
+        <label for="navSet" class="nav-burger"></label>
+
+        <div class="nav-area bg-1 navi">
+            <nav class="inner-1 rocknroll-one-regular">
+                <ul class="flex">
+                    <li><a href="../index.html">Top</a></li>
+                    <li><a href="../reservation/index.html">体験予約</a></li>
+                    <li><a href="#" class="current">スタジオ・講師紹介</a></li>
+                    <li><a href="../recipe/index.html">料理レシピ</a></li>
+                    <li><a href="../course/index.html">コース・料金</a></li>
+                    <li><a href="../access/index.html">アクセス</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="to-taiken"><a href="../reservation/index.html"><img src="../assets/images/to_taiken.png" alt="体験予約ページへ"></a></div>
+
+        <main>
+            <section class="inner-1 fadeUp-trigger">
+                <h2>キッチンスタジオ</h2>
+                <img src="../assets/images/kousi-2_02.png" alt="スタジオの写真" width="1000" height="628">
+                <div class="left">
+                    <p class="text-1"><span>日差しのさしこむあたたかいキッチン。</span><span>自宅にいるようなアットホームな空間で</span><span>リラックスして料理を学べます。</span>
+                    <!-- <img src="../assets/images/kousi-2_03.png" alt="" width="192" height="207"> -->
+                </div>
+                <div class="center"><img src="../assets/images/underline_696x11.png" alt="" width="696" height="11">
+                </div>
+                <div class="left">
+                    <p class="text-2">経験豊富な講師陣が、一人ひとりに寄り添い<span>丁寧な指導でサポートします。</span>
+                    <p class="text-3">気取らない教室の雰囲気の中、<span>料理を通じて楽しい時間をご一緒しませんか。</span>
+                </div>
+                <img src="../assets/images/underline_696x11.png" alt="" width="696" height="11">
+            </section>
+            <div class="ketchup"><img src="../assets/images/kpline_1280x142.png" alt="" width="1280" height="142"></div>
+
+            <section>
+                <div class="inner-1">
+                    <div class="fadeUp-trigger">
+                        <h2>講師紹介</h2>
+                        <img src="../assets/images/kousi-2_05.png" alt="講師の写真" width="1000" height="628">
+                    </div>
+                    <div class="fadeUp-trigger">
+                        <h3>若手講師：優月（ゆづき）</h3>
+                        <img src="../assets/images/underline_696x11.png" alt="" width="696" height="11">
+                        <div class="left150">
+                            <p class="text-4">
+                                明るく親しみやすい雰囲気で、<span>若い世代の方から圧倒的な支持を集める人気講師です。</span><span>現代的なセンスを取り入れつつ、</span><span>家庭で実践しやすいレシピを提案しています。</span>
+                            </p>
+                            <p class="text-5">経歴:<br>調理師専門学校を卒業後、<br>都内の人気カフェでキッチンスタッフとして勤務。</p>
+                            <p class="text-6">SNSでのレシピ投稿が話題となり、独立。<span>「まごころキッチン」立ち上げメンバーとして、</span><samp>若者の食生活を豊かにするメニュー開発を担当。</samp>
+                            </p>
+                        </div>
+                        <div class="flex">
+                            <P class="text-7">得意な料理:<br>カフェ風のおしゃれなワンプレートごはん<br>時短・簡単！お弁当のおかず<br>旬のフルーツを使った手作りスイーツ</P>
+
+                            <div class="fadeUp-trigger">
+                                <a href="../recipe/index.html" class="link">
+                                    <span class="recipe-text-1">料理レシピ</span>
+
+                                    <div class="oreng"><img src="../assets/images/kousi-2_0.png" alt="オレンジの画像"
+                                            width="167" height="167"></div>
+                                </a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="ketchup-2"><img src="../assets/images/kpline_1280x142.png" alt="" width="1280" height="142">
+                </div>
+
+                <div class="inner-1 fadeUp-trigger">
+                    <img src="../assets/images/kousi-2_09.png" alt="講師の写真" width="1000" height="628">
+                    <h3>ベテラン講師：和子（かずこ）</h3>
+                    <img src="../assets/images/underline_696x11.png" alt="" width="696" height="11">
+                    <div class="left150">
+                        <p class="text-4">
+                            長年の主婦経験と料理人としての知識を活かし、<span>家庭料理の基本と知恵を優しく丁寧に教えてくれます。</span><span>生徒さんからは「お母さんの味」と慕われる、</span>あたたかい存在です。
+                        </p>
+                        <p>経歴:<br>老舗料亭で修行を積み、調理師免許を取得。<span>結婚・出産を機に家庭に入り、</span><span>三児の母として日々の食卓を支える。</span>近所のママ友に料理を教え始めたことがきっかけで、<span>講師としての道へ。</span><span>「荻窪Mogu料理教室」では、</span>日本の伝統的な家庭料理を中心に担当。
+                        </p>
+                    </div>
+                    <div class="flex">
+                        <p class="text-8">
+                            得意な料理:<br>基本のだしから取る和食全般<br>（煮物、焼き魚、季節の炊き込みごはん）<br>家族が喜ぶ定番の洋食メニュー<br>（ハンバーグ、カレーライス）<br>漬物や保存食作り
+                        </p>
+                        <div class="fadeUp-trigger">
+                            <a href="../recipe/index.html" class="link">
+                                <span class="recipe-text">料理レシピ</span>
+
+                                <div class="okura">
+                                    <img src="../assets/images/okura_271x271.png" alt="" width="271" height="271">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ketchup-3"><img src="../assets/images/kpline_1280x142.png" alt="" width="1280" height="142">
+                </div>
+
+
+            </section>
+
+        </main>
+
+
+        <footer class="bg-1">
+            <div class="inner-1 flex">
+
+                <div>
+                    <div><img src="../assets/images/mogu_logo_02_170x116.svg" alt="荻窪にある料理教室「荻窪Mogu教室」" width="170"
+                            height="116">
+                    </div>
+                    <address>
+                        <p>教室名:荻窪Mogu料理教室</p>
+                        <p>住所:東京都杉並区南荻窪4-32</p>
+                        <p>電話番号:123-4567-8910</p>
+                        <p>荻窪駅徒歩7分</p>
+                    </address>
+                </div>
+
+                <div>
+                    <div class="footer_insta">
+                        <p><a href="#"><img src="../assets/images/footer_instagram_50x50.png"
+                                    alt="荻窪Mogu料理教室のInstagramアカウントへ" width="50" height="50"></a></p>
+                        <p>@ogikubo_Mogu</p>
+                    </div>
+                    <p class="copyright"><small>&copy;2025 Ogikubo mogu cooking</small></p>
+                </div>
+
+                <p class="cutlery">
+                    <img src="../assets/images/cat_01_290x290.png" alt="カトラリーの画像" width="290" height="290">
+                </p>
+
+            </div>
+        </footer>
+        <div class="to-top">
+            <a href="#"><img src="../assets/images/to_top_50x90.png"
+                    onmouseover="this.src='../assets/images/to_top_after.png'"
+                    onmouseout="this.src='../assets/images/to_top_50x90.png'" alt="ページの先頭に戻る" width="" height=""></a>
+        </div>
+        <div class="cta">
+            <p class="rocknroll-one-regular"><a href="../reservation/index.html">体験予約はこちら</a></p>
+        </div>
+    </div>
+</body>
