@@ -158,7 +158,7 @@ form input[type="submit"]:hover{
 main ul{
     line-height: 2em;
     margin-top: 40px;
-
+    padding: 0 20px;
 }
 
 main .big-list{

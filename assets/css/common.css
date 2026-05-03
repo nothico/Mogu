@@ -200,7 +200,7 @@ nav ul li a:hover{
 
 footer .flex{
     align-items: flex-end;
-    padding-bottom: 28px;
+    padding: 10px 20px 28px;
 }
 
 footer address{
@@ -479,6 +479,7 @@ mv-photo img{
 
     footer .cutlery img{
         width: 100%;
+        height: auto;
     }
 
 /* ★補足 */

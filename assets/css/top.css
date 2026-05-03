@@ -76,7 +76,10 @@ main .news-bg{
 /* イラストの部分を作り出す */
 main .news-bg section{
     position: relative;    /* 位置の基準にする */
+    padding: 0 20px;
 }
+
+
 
 main .news-bg section::after{
     content:"";     /* 空っぽを差し込む*/
@@ -145,6 +148,8 @@ main .flex{
         height: 500px;
         overflow: hidden;
     }
+
+
 }
 
 
